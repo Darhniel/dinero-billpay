@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "dinero-billpay",
+    "slug": "dinero-billpay",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/dinero.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splashscreen.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1B1A1A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.darhniel.dinerobillpay"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/dinero.png",
+        "backgroundColor": "#1B1A1A"
+      },
+      "package": "com.darhniel.dinerobillpay"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4d17bbc9-92ec-472b-8b9c-9a6fdffe5136"
+      }
+    }
+  }
+}
