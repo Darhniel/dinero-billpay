@@ -17,7 +17,7 @@ export default function FundScreen({ navigation }: any) {
           <Text style={styles.textBody}>Add money to your wallet directly with bank transfers.</Text>
         </View>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.options}>
+      <TouchableOpacity style={styles.options} onPress={() => navigation.navigate('Card')}>
         <Image source={require('../assets/images/cards.png')} />
         <View style={styles.texts}>
           <Text style={styles.textHeading}>Fund wallet with Card</Text>
@@ -33,7 +33,7 @@ function useStyles() {
     container: {
       flex: 1,
       backgroundColor: "#F5F5F5",
-      width: "100%", 
+      width: "100%",
       height: "100%"
     },
     heading: {
@@ -67,7 +67,7 @@ function useStyles() {
       width: scale(200)
     }
   });
-  
+
   return { styles }
 
 }

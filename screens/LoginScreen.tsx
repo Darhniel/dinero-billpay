@@ -12,6 +12,8 @@ import { scale, verticalScale, moderateScale, moderateVerticalScale } from 'reac
 type LoginScreenProps = NativeStackScreenProps<RootStackParamList, 'Login'>;
 
 const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
+  const apiUrl = process.env.EXPO_PUBLIC_API_URL;
+
   const [user, setUser] = useState({ email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [disabled, setDisabled] = useState(true);
@@ -36,7 +38,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   async function submit() {
     setLoading(true);
     try {
-      const response = await fetch('https://api.dinerobillpay.com/api/v1/login', {
+      const response = await fetch(apiUrl + '/v1/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +83,7 @@ const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   async function forgotPassword() {
     setLoading(true);
     try {
-      const response = await fetch('https://dinero-backend-production.up.railway.app/api/v1/auth/reset/password', {
+      const response = await fetch(apiUrl + '/v1/auth/reset/password', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
